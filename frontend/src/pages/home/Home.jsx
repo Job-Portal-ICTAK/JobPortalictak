@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import Header from "../../components/header/Header";
 import Posts from "../../components/posts/Posts";
-import Sidebar from "../../components/sidebar/Sidebar";
+// import Sidebar from "../../components/sidebar/Sidebar";
 import "./Home.css";
 import axios from "axios";
 import { Context } from "../../context/Context";
@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = await axios.get(
-        "https://myblogapion.herokuapp.com/api/posts",
+        // "https://myblogapion.herokuapp.com/api/posts",
         {
           headers: { token: "Bearer " + user.accessToken },
         }
@@ -30,14 +30,14 @@ export default function Home() {
         <Header />
         <div className="home">
           <Posts posts={posts} />
-          <Sidebar />
+          {/* <Sidebar /> */}
         </div>
       </>
     );
   }
   return (
     <div className="warning">
-      <h1>Login To See Posts😊</h1>
+      <h1>Login To See Posts</h1>
     </div>
   );
 }
