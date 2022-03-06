@@ -20,5 +20,37 @@ router.post("/register", async (req, res) => {
 });
 
 //LOGIN
+router.post("/login", async (req, res) => {
+    try {
+      const user = await User.findOne({ username: req.body.username });
+      !user && res.status(400).json("Wrong credentials!");
+  
+      const validated = (await req.body.password) === user.password;
+      !validated && res.status(400).json("Wrong credentials!");
+  
+      const { password, ...others } = user._doc;
+      const userid = others._id.valueOf();
+      const useradmin = others.isAdmin;
+  
+      const useremail = others.email;
+      const userusername = others.username;
+  
+      console.log(others);
+      // return res.status(200).json(others);
+      // generate acess token
+      others.accessToken = jwt.sign(
+        {
+          id: userid,
+          username: userusername,
+          isAdmin: useradmin,
+          email: useremail,
+        },
+        process.env.SECRET_KEY
+      );
+      return res.status(200).json(others);
+    } catch (err) {
+      // return res.status(500).json(err);
+    }
+  });
 
 module.exports = router;

@@ -93,12 +93,12 @@ export default function Register() {
           REGISTER
         </button>
       </form>
-      <button className="registerLoginButton">
+      {/* <button className="registerLoginButton">
         {" "}
         <Link to="/login" className="link">
           LOGIN
         </Link>
-      </button>
+      </button> */}
       {error && <span>Something Went Wrong!</span>}
     </div>
   );

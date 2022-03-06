@@ -37,7 +37,7 @@ export default function TopBar() {
 
           <li className="topListItem">
             <Link className="link" to="/write">
-              ADD POST
+              ADD JOB
             </Link>
           </li>
           <Link className="link" to="/">
