@@ -20,8 +20,8 @@ mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    // useCreateIndex: true,
-    // useFindAndModify: true,
+    useCreateIndex: true,
+    useFindAndModify: true,
   })
   .then(console.log("connected to MONGODB"))
   .catch((err) => console.log(err));
