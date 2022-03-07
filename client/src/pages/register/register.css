@@ -4,11 +4,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(
+    background: 
+    linear-gradient(
         rgba(255, 255, 255, 0.5),
         rgba(255, 255, 255, 0.5)
       ),
-      url("https://img5.goodfon.com/wallpaper/big/e/7f/sea-sky-sunset-pink-beach-more-nebo-zakat-pliazh.jpg");
+      url("https://cdn.pixabay.com/photo/2018/01/31/15/42/blue-3121354_960_720.jpg");
     background-size: cover;
   }
   

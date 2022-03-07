@@ -5,9 +5,9 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarItem">
-        <span className="sidebarTitle">ABOUT ME</span>
+        <span className="sidebarTitle">ICT Academy of kerala</span>
         <img
-          src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandblog/demo/wp-content/uploads/2015/11/aboutme.jpg"
+          src="https://cdn.pixabay.com/photo/2018/02/19/09/15/web-3164557_960_720.jpg"
           alt=""
         />
         <p>
@@ -16,7 +16,7 @@ export default function Sidebar() {
         </p>
       </div>
       <div className="sidebarItem">
-        <span className="sidebarTitle">CATEGORIES</span>
+        <span className="sidebarTitle">EVENTS</span>
         <ul className="sidebarList">
           <li className="sidebarListItem">
             {/* <Link className="link" to="/posts?cat=Life"> */}
