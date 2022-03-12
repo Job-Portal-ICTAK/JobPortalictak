@@ -7,9 +7,11 @@ const userRoute = require('./routes/users');
 const postRoute = require('./routes/posts');
 const categoryRoute = require('./routes/categories');
 const multer = require("multer");
+const path = require('path');
 
 dotenv.config();
 app.use(express.json());
+app.use("/images", express.static(path.join(__dirname, "/images")));
 
 //mongo
 mongoose.connect(process.env.MONGO_URL,{
@@ -41,6 +43,6 @@ app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
 
-app.listen('3000',()=>{
-    console.log("server running at 3000");
+app.listen('5000',()=>{
+    console.log("server running at 5000");
 });
