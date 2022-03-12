@@ -39,7 +39,7 @@ export default function Topbar() {
           <Link className="link" to="/settings">
             <img
               className="topImg"
-              src="https://img.freepik.com/free-photo/dark-wall-empty-room-with-plants-floor-3d-rendering_41470-3847.jpg?w=740"
+              src={user.profilePic}
               alt=""
             />
           </Link>
