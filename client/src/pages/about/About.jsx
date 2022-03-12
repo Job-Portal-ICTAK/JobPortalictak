@@ -21,9 +21,9 @@ export default function About() {
                      </Link>
                     </button>
                </div>
-            </div>
+            </div><br></br><br></br>
              <div className="points">
-              <h2>Our Key Focus Areas</h2>
+              <h2>Our Key Focus Areas</h2><br></br>
                <ul>
               <li>Industry focused enablement programmes for Faculty members</li>
               <li>Industry focused ICT Skills development programmes for Students</li>
