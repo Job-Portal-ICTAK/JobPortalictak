@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+
 import axios from "axios";
 import "./sidebar.css";
 import { useEffect, useState } from "react";
@@ -21,12 +21,13 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">ICT Academy of kerala</span>
         <img
-          src="https://cdn.pixabay.com/photo/2018/02/19/09/15/web-3164557_960_720.jpg"
+          src="https://imgs.search.brave.com/bxdrksaSbnyDHUNMN5sSqD45Sw628quzDkTbcST82y4/rs:fit:512:512:1/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vaWN0a2Vy/YWxhLm9yZy93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxOS8wMS9j/cm9wcGVkLWljdC1p/Y28ucG5nP2ZpdD01/MTIlMkM1MTImc3Ns/PTE"
           alt=""
         />
         <p>
-          Laboris sunt aute cupidatat velit magna velit ullamco dolore mollit
-          amet ex esse.Sunt eu ut nostrud id quis proident.
+        ICT Academy of Kerala has influenced thousands of students and teachers
+         in the state and made them realize the significance of employability.
+         ICTAK has made the member colleges proud of and help them to showcase their achievements.
         </p>
       </div>
       <div className="sidebarItem">
