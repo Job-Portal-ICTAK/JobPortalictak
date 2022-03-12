@@ -36,17 +36,17 @@ export default function SinglePost() {
             <i className="singlePostIcon far fa-trash-alt"></i>
           </div>
         </h1>
+
         <div className="singlePostInfo">
-          <span>
-            Author:
-            <b className="singlePostAuthor">
-              <Link className="link" to="/posts?username=Safak">
-               {post.username}
-              </Link>
-            </b>
+          <span className="singlePostAuthor">
+            Author: 
+            <Link className="link" to={`/?user=${post.username}`}>
+              <b>{post.username}</b>
+            </Link>
           </span>
-          <span>{new Date(post.createdAt).toDateString()}</span>
+          <span className="singlePostDate">{new Date(post.createdAt).toDateString()}</span>
         </div>
+
         <p className="singlePostDesc">
          {post.desc}
         </p>
