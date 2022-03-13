@@ -6,6 +6,7 @@ import "./write.css";
 export default function Write() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
+  const [categories, setCategories] = useState("");
   const [file, setFile] = useState(null);
   const {user} = useContext(Context);
 
@@ -15,7 +16,8 @@ export default function Write() {
       isAdmin: user.isAdmin,
       username:user.username,
       title,
-      desc
+      desc,
+      categories
     };
     if(file) {
       const data = new FormData();
@@ -64,6 +66,16 @@ export default function Write() {
             autoFocus={true}
             onChange={(e) => setDesc(e.target.value)}
           />
+          <input
+            className="writeInput"
+            placeholder="Categories"
+            type="text"
+            autoFocus={true}
+            onChange={(e) => setCategories(e.target.value)}
+          />
+        </div>
+        <div className="writeCat">
+        
         </div>
         <button className="writeSubmit" type="submit">
           Publish
