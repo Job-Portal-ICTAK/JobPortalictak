@@ -12,6 +12,7 @@ export default function Write() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newPost = {
+      isAdmin: user.isAdmin,
       username:user.username,
       title,
       desc
@@ -31,7 +32,7 @@ export default function Write() {
         window.location.replace("/post/" + res.data._id);
       }catch(err) {}
   }
-
+  if(user.isAdmin===true){
   return (
     <div className="write">
       {file && (
@@ -69,6 +70,11 @@ export default function Write() {
         </button>
       </form>
       write
+    </div>
+  );}
+  return (
+    <div className="warning">
+      <h1>Only Admin Can add Posts, Contact Admin</h1>
     </div>
   );
 }
