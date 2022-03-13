@@ -1,8 +1,8 @@
 import "./settings.css";
-import Sidebar from "../../components/sidebar/Sidebar";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
+import Sidebar from "../../components/sidebar/Sidebar";
 
 export default function Settings() {
   const [file, setFile] = useState(null);
@@ -76,9 +76,7 @@ export default function Settings() {
           <button className="settingsSubmit" type="submit">
             Update
           </button>
-          {success && (
-            <span style={{color:"green", textAlign:"center", marginTop: "20px"}}>Profile has been updated...</span>
-          )}
+          {success && (   <span style={{color:"green", textAlign:"center", marginTop: "20px"}}>Profile has been updated...</span> )}
         </form>
       </div>
       <Sidebar />
